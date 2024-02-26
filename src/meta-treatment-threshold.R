@@ -4,7 +4,7 @@ source("utils.R")
 theme_set(theme_minimal())
 
 # parameters
-files <- list.files("../data/clean", full.names = TRUE, pattern = "meta-effect-threshold-")
+files <- list.files("../data/clean", full.names = TRUE, pattern = "meta-treatment-threshold-")
 length(files)
 
 models_itt <- list()
