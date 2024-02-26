@@ -1,6 +1,6 @@
 # README
 
-Repository for manuscript "[Reducing misinformation sharing at scale using digital accuracy prompt ads](https://osf.io/preprints/psyarxiv/u8anb)"
+Repository for manuscript [Reducing misinformation sharing at scale using digital accuracy prompt ads](https://osf.io/preprints/psyarxiv/u8anb)
 
 # Directories
 
