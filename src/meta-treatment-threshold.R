@@ -3,7 +3,7 @@ library(tidyverse); library(data.table); library(glue); library(meta)
 source("utils.R")
 theme_set(theme_minimal())
 
-# parameters
+# get files - one per threshold
 files <- list.files("../data/clean", full.names = TRUE, pattern = "meta-treatment-threshold-")
 length(files)
 
@@ -13,6 +13,7 @@ meta_itt_results <- list()
 meta_att_results <- list()
 thresholds <- c()
 
+# loop through each file/threshold
 for (i in 1:length(files)) {
     d2 <- fread(files[i])
     threshold <- as.character(d2$threshold[1])
