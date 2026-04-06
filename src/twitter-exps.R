@@ -1,4 +1,5 @@
-# analysis for individual twitter experiments, R1, R2, R3, NR
+#' analysis for individual twitter experiments, R1, R2, R3, NR
+#' see SI section S2.2.1 for disaggregated results and S2.2.3 for multiverse analysis.
 
 # %% set up =================================================
 
@@ -8,7 +9,7 @@ library(glue)
 library(here)
 library(fixest)
 
-# %% domain-level analyses for all studies
+# %% domain-level analyses for experiments R1, R2, R3, NR
 
 #' Analyze a Twitter experiment for a given experiment and domain quality threshold. Reads data from 'data/twitter-exps' and fits a fixed-effects GLM model.
 #'
@@ -40,4 +41,8 @@ analyze_experiment <- function(experiment = "R1", threshold = 70) {
 analyze_experiment("R1", 70)
 
 
-# %%
+# %% hashtag analysis for experiment R2
+
+d1 <- fread(here("data", "twitter-exps", "exp-R2_hashtag.csv"))
+mod <- feglm(t1 ~ conditionC * t0SC | block + day, d1, family = "quasipoisson", cluster = "block")
+mod
