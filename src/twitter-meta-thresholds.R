@@ -1,3 +1,5 @@
+# analysis for main result (quality threshold 70, plus results for all thresholds from 40 to 80, in steps of 5)
+
 # %% set up =================================================
 
 rm(list = ls())

@@ -1,4 +1,4 @@
-# SI section S2.2.3
+# SI section S2.2.3 multiverse analysis
 
 # %% set up =================================================
 
