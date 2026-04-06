@@ -8,7 +8,7 @@ library(here)
 source(here("src", "utils.R"))
 
 # get file paths - one per threshold
-files <- list.files("data/twitter-meta-analysis", full.names = TRUE, pattern = "meta-treatment-threshold-")
+files <- list.files(here("data", "twitter-meta"), full.names = TRUE, pattern = "meta-treatment-threshold-")
 length(files)
 
 # %%
