@@ -1,4 +1,5 @@
-# SI section S2.2.3 multiverse analysis
+#' SI section S2.2.3 multiverse analysis
+#' loads data from 'data/twitter-meta' and plots I^2 heterogeneity, Q-statistic, and ITT effects across experiments R1, R2, R3, NR.
 
 # %% set up =================================================
 

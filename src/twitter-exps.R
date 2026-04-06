@@ -1,4 +1,5 @@
 #' analysis for individual twitter experiments, R1, R2, R3, NR
+#' loads data from 'data/twitter-exps' and fits a fixed-effects GLM model.
 #' see SI section S2.2.1 for disaggregated results and S2.2.3 for multiverse analysis.
 
 # %% set up =================================================

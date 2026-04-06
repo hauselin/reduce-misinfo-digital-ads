@@ -1,4 +1,5 @@
-# analysis for main result (quality threshold 70, plus results for all thresholds from 40 to 80, in steps of 5)
+#' analysis for main result (quality threshold 70, plus results for all thresholds from 40 to 80, in steps of 5)
+#' loads data from 'data/twitter-meta' and fits a meta-analysis model.
 
 # %% set up =================================================
 
