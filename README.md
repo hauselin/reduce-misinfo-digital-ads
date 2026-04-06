@@ -6,7 +6,6 @@ Repository for manuscript [Reducing misinformation sharing at scale using digita
 
 - `data`: data files
 - `figures`: figures
-- `results`: results and output
 - `src`: source code or scripts for analyses (performed on R version 4.5.2 2025-10-31)
 	- All scripts assume that the working directory is the repository root (managed by `here` package)
 	- `utils.R`: utility functions
