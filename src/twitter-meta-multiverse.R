@@ -14,6 +14,7 @@ theme_set(theme_minimal())
 
 d1 <- fread(here("data", "twitter-meta", "multiverse-meta_itt_results_heterogeneity.csv"))
 d1[, .N, keyby = n_exps]
+stopifnot(nrow(d1) == 270)
 d1[, I2 := I2 * 100]
 d1[, winsorize := factor(winsorize)]
 
@@ -108,6 +109,7 @@ ggsave(here("figures", "fig-s15-I_resid.png"), dpi = 300, bg = "white", width = 
 
 
 d10 <- fread(here("data", "twitter-meta", "multiverse-meta_itt_results.csv"))
+stopifnot(nrow(d10) == 270)
 d10[, .N, keyby = n_exps]
 d10[, psig := ifelse(pval <= 0.05, 1, 0)]
 d10[, .(prop_sig = round(mean(psig), 3)), keyby = .(outcome)][order(-prop_sig)]
