@@ -39,10 +39,16 @@ analyze_experiment <- function(experiment = "R1", threshold = 70) {
     return(mod)
 }
 
+# read data and fit model to each experiment, specifying the experiment and threshold
 analyze_experiment("R1", 70)
+analyze_experiment("R2", 70) # low-quality domain count, not hashtag (note that main text uses hashtag count, see section below)
+analyze_experiment("R3", 70)
+analyze_experiment("NR", 70)
 
 
 # %% hashtag analysis for experiment R2
+
+#' Experiment R2 uses hashtag data, not domain data, so we need to use a different data file.
 
 d1 <- fread(here("data", "twitter-exps", "exp-R2_hashtag.csv"))
 mod <- feglm(t1 ~ conditionC * t0SC | block + day, d1, family = "quasipoisson", cluster = "block")
